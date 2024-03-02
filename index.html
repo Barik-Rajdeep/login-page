@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <script>
+        function validateForm() {
+          const email = document.forms["myForm"]["email"].value;
+          const password = document.forms["myForm"]["password"].value;
+      
+          if (email === "rajdeepbarik5@gmail.com" && password === "rajdeep0099") {
+            // Redirect the user to your website
+            window.location.replace("https://barik-rajdeep.github.io/curriculum-vitae/");
+            return true;
+          } else {
+            // If the username or password is incorrect, show an error message
+            alert("Something went wrong. Please check your username or password.");
+            return false;
+          }
+        }
+      </script>
+  
+  <body>
+    <div class="container">
+        <form action="" class="form">
+            <h2>SIGN IN</h2>
+            <input type="email" name="email" class="box" placeholder="enter email">
+            <input type="password" name="password" class="box" placeholder="enter password">
+            <input type="submit" value="SIGN IN" id="submit">
+            <a href="#"> Forget password</a>
+        </form>
+        <div class="side">
+            <img src="bg right.png" alt="Rajdeep">
+
+        </div> 
+    </div>
+ </body>
+ <style>
+    body{
+      background-image: url('final back ground.png');
+    }
+    </style>
