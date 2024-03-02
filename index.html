@@ -4,43 +4,47 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login form</title>
+    <title>Login Form</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <style>
+      body {
+        background-image: url('final back ground.png');
+      }
+    </style>
     <script>
-        function validateForm() {
-          const email = document.forms["myForm"]["email"].value;
-          const password = document.forms["myForm"]["password"].value;
-      
-          if (email === "rajdeepbarik5@gmail.com" && password === "rajdeep0099") {
-            // Redirect the user to your website
-            window.location.replace("https://barik-rajdeep.github.io/curriculum-vitae/");
-            return true;
-          } else {
-            // If the username or password is incorrect, show an error message
-            alert("Something went wrong. Please check your username or password.");
-            return false;
-          }
+      function validateForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const email = document.forms["myForm"]["email"].value;
+        const password = document.forms["myForm"]["password"].value;
+
+        if (email === "rajdeepbarik5@gmail.com" && password === "rajdeep0099") {
+          // Redirect the user to your website
+          window.location.href = "https://barik-rajdeep.github.io/curriculum-vitae/";
+        } else {
+          // If the username or password is incorrect, show an error message
+          alert("Something went wrong. Please check your username or password.");
         }
-      </script>
-  
+      }
+    </script>
+  </head>
   <body>
     <div class="container">
-        <form action="" class="form">
-            <h2>SIGN IN</h2>
-            <input type="email" name="email" class="box" placeholder="enter email">
-            <input type="password" name="password" class="box" placeholder="enter password">
-            <input type="submit" value="SIGN IN" id="submit">
-            <a href="#"> Forget password</a>
-        </form>
-        <div class="side">
-            <img src="bg right.png" alt="Rajdeep">
-
-        </div> 
+      <form id="myForm" class="form" onsubmit="return validateForm(event)">
+        <h2>SIGN IN</h2>
+        <input type="email" name="email" class="box" placeholder="Enter email">
+        <input type="password" name="password" class="box" placeholder="Enter password">
+        <input type="submit" value="SIGN IN" id="submit">
+        <a href="#">Forget password</a>
+      </form>
+      <div class="side">
+        <img src="bg right.png" alt='user'>
+      </div> 
     </div>
- </body>
- <style>
+  </body>
+  <style>
     body{
-      background-image: url('final back ground.png');
+      background-image:'final back ground.png';
     }
-    </style>
+  </style>
+</html>
